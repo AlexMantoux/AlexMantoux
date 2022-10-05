@@ -345,4 +345,22 @@ a {
   bottom: 0;
   background-color: lime;
 }
+
+@media screen and (max-width: 1100px) {
+  #staticNameAnim {
+    font-size: 84px;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  #staticNameAnim {
+    font-size: 62px;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  #staticNameAnim {
+    font-size: 38px;
+  }
+}
 /*# sourceMappingURL=style.css.map */
