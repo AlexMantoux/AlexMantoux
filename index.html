@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-xUA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="HI, I'm ALEX a FULL-STACK DEVELOPER, UX and UI, skills in Python, Javascript, TypeScript, Sql and Php.">
+    <meta name="Keywords" content="developer, full-stack, web, creator">
     <link rel="stylesheet" href="/style/style.css">
-    <link rel="shortcut icon" href="/images/logo.png" type="image/x-icon">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="shortcut icon" href="/images/logAlex.png" type="image/x-icon">
     <script src="./script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
     <title>Alex Mantoux</title>
 </head>
 <body>
@@ -27,7 +28,7 @@
             </ul>
         </div>
     </nav>
-    <div class=container>
+    <div class="container">
         <div id="screen1">
             <div id="maintitle">
                 <svg width="292" height="113" viewBox="0 0 292 113" fill="transparent" xmlns="http://www.w3.org/2000/svg">
@@ -35,24 +36,153 @@
                 </svg>
             </div>
         </div>
-        <div id="screen2">
-            <div>
-                <h1 id="staticNameAnim">My skills are: <br><span id="movWordsAnim"></span></h1>
-            </div>
-        </div>
         <div id="screen3">
             <div class="mylife">
-                <p>🚧</p>
+                <p>HI, I'M ALEX A FULL-STACK DEVELOPER, WEB CREATOR AND… , BASED IN FRANCE🥖</p>
+            </div>
+        </div>
+        <div id="screen2">
+            <div class="Rien">
+                <h1 id="staticNameAnim">My skills are: <br>
+                <h1 class="ml4">
+                    <span class="letters letters-1">JS.</span>
+                    <span class="letters letters-2">PY.</span>
+                    <span class="letters letters-3">PHP.</span>
+                    <span class="letters letters-4">SQL.</span>
+                  </h1>
             </div>
         </div>
         <div id="screen4">
-            <p>🚧</p>
-            <div class="al" style="height: 10px; width: 10px; background-color: lime;"></div>
+            <div>
+                <p>Thank you for clicking on my website, I hope we will work together, bye!</p><br>
+                <p>contact me <a class="a" href="mailto:alex.mantoux@gmail.com">here</a></p>
+            </div>
+        </div>
+        <div id="lastScreen">
+            <h1 class="ml11">
+                <h1 class="ml16">Made by Alex Mantoux with love</h1>
+              </h1>
         </div>
     </div>
-
-
 </body>
+
+
+<script>
+
+var textWrapper = document.querySelector('.ml16');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml16 .letter',
+    translateY: [-100,0],
+    easing: "easeOutExpo",
+    duration: 1400,
+    delay: (el, i) => 30 * i
+  }).add({
+    targets: '.ml16',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });
+
+</script>
+
+<script>
+    // Wrap every letter in a span
+var textWrapper = document.querySelector('.ml2');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml2 .letter',
+    scale: [4,1],
+    opacity: [0,1],
+    translateZ: 0,
+    easing: "easeOutExpo",
+    duration: 950,
+    delay: (el, i) => 70*i
+  }).add({
+    targets: '.ml2',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });
+</script>
+
+
+
+<script>
+    var ml4 = {};
+ml4.opacityIn = [0,1];
+ml4.scaleIn = [0.2, 1];
+ml4.scaleOut = 3;
+ml4.durationIn = 800;
+ml4.durationOut = 600;
+ml4.delay = 500;
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml4 .letters-1',
+    opacity: ml4.opacityIn,
+    scale: ml4.scaleIn,
+    duration: ml4.durationIn
+  }).add({
+    targets: '.ml4 .letters-1',
+    opacity: 0,
+    scale: ml4.scaleOut,
+    duration: ml4.durationOut,
+    easing: "easeInExpo",
+    delay: ml4.delay
+  }).add({
+    targets: '.ml4 .letters-2',
+    opacity: ml4.opacityIn,
+    scale: ml4.scaleIn,
+    duration: ml4.durationIn
+  }).add({
+    targets: '.ml4 .letters-2',
+    opacity: 0,
+    scale: ml4.scaleOut,
+    duration: ml4.durationOut,
+    easing: "easeInExpo",
+    delay: ml4.delay
+  }).add({
+    targets: '.ml4 .letters-3',
+    opacity: ml4.opacityIn,
+    scale: ml4.scaleIn,
+    duration: ml4.durationIn
+  }).add({
+    targets: '.ml4 .letters-3',
+    opacity: 0,
+    scale: ml4.scaleOut,
+    duration: ml4.durationOut,
+    easing: "easeInExpo",
+    delay: ml4.delay
+  }).add({
+    targets: '.ml4 .letters-4',
+    opacity: ml4.opacityIn,
+    scale: ml4.scaleIn,
+    duration: ml4.durationIn
+  }).add({
+    targets: '.ml4 .letters-4',
+    opacity: 0,
+    scale: ml4.scaleOut,
+    duration: ml4.durationOut,
+    easing: "easeInExpo",
+    delay: ml4.delay
+  }).add({
+    targets: '.ml4',
+    opacity: 0,
+    duration: 500,
+    delay: 500
+  });
+</script>
+
+
+
+
 </html>
 
 
